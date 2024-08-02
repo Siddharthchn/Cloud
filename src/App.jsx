@@ -8,6 +8,7 @@ import RecentOrders from './components/RecenetOrders';
 import CustomerFeedback from './components/CustomerFeedback';
 import NetProfitCard from './components/NetProfitCard'
 import { dashboardCardData } from './data/dashboardCardData';
+import Goals from './components/Goals';
 
 const App = () => {
   return (
@@ -20,7 +21,7 @@ const App = () => {
         </div>
         <div className="px-6 py-5 grid grid-cols-1 md:grid-cols-12 gap-6">
           {/* Dashboard Cards and Large Card in the same row */}
-          <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="md:col-span-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
             {dashboardCardData.map((card, index) => (
               <DashboardCard
                 key={index}
@@ -37,7 +38,7 @@ const App = () => {
               />
             ))}
           </div>
-          <div className="md:col-span-4 bg-gray-800 text-white p-4 rounded-lg shadow-md">
+          <div className="md:col-span-4 bg-gray-800 text-white rounded-lg shadow-md">
          <NetProfitCard />
           </div>
         </div>
@@ -46,9 +47,7 @@ const App = () => {
             <ActivityChart />
           </div>
           <div className="md:col-span-4 bg-gray-800 text-white p-4 rounded-lg shadow-md">
-            <h4 className="text-lg mb-4">Goals</h4>
-            <p>Popular Dishes</p>
-            <p>Menus</p>
+            <Goals />
           </div>
         </div>
         <div className="px-6 py-3 grid grid-cols-1 md:grid-cols-12 gap-6">

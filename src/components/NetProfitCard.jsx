@@ -1,39 +1,46 @@
 // src/components/NetProfitCard.js
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaCaretUp } from 'react-icons/fa';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 const NetProfitCard = () => {
-  const value = 70;
-  const text = "70% goal completed";
+    const [progress, setProgress] = useState(0);
+    const targetValue = 70;
+  const text = "70% goal";
+
+  useEffect(() => {
+    setTimeout(() => {
+      setProgress(targetValue);
+    }, 500); // Delay to start the animation
+  }, [targetValue]);
 
   return (
-    <div className="bg-gray-800 text-white p-4 flex items-center justify-between w-full">
+    <div className="text-white p-4 flex flex-row md:flex-col xl:flex-row  justify-between w-full">
       <div className="w-full">
         <h4 className="text-md">Net Profit</h4>
-        <div className="flex flex-col mt-5">
-          <p className="text-[35px] font-bold">$ 6759.25</p>
-          <div className="flex items-center text-lg font-semibold mt-3 text-[#65D750]">
+        <div className="flex flex-col justify-start md:justify-between xl:justify-start md:flex-row xl:flex-col mt-5">
+          <p className="xl:text-[35px] lg:text-[34px] md:text-[22px] text-[26px] font-bold">$6759.25</p>
+          <div className="flex items-center text-lg font-semibold mt-3 md:mt-0 xl:mt-2 text-[#65D750]">
             <FaCaretUp size={26} />
-            <span className="tracking-tighter ml-1">3%</span>
+            <span className="tracking-tighter ml-1 md:ml-0 xl:ml-1">3%</span>
           </div>
         </div>
       </div>
-      <div className='relative' style={{ width: 150, height: 140}}>
+      <div className='relative w-[120px] h-[100px] md:w-[140px] md:h-[120px] lg:w-[160px] lg:h-[140px] md:mt-10 md:ml-3 lg:mt-8 lg:ml-[46px] xl:mt-0 xl:ml-0'>
         <CircularProgressbar
-          value={value}
+        value={progress}
           styles={buildStyles({
             // Colors
-            pathColor: `rgba(62, 152, 199, ${value / 100})`,
+            pathColor: `rgba(62, 152, 199, ${progress / 100})`,
             textColor: '#ffffff',
             trailColor: '#293368',
-            backgroundColor: '#7396FF',
+            backgroundColor: '#7195FE',
             strokeWidth: 12,  // Adjust this value to make the progress bar thicker
           })}
         />
-        <div className="absolute top-[18%] text-center text-[13px] text-white mt-2">{text}</div>
-        <div className='text-[11px] ml-2 mt-3'>*The values has been rounded off</div>
+        <div className="absolute top-[20%] left-[16%] md:top-[35%] md:left-[25%] lg:top-[36%] lg:left-[26%] xl:top-[21%] xl:left-[21%] text-center text-[13px] lg:text-[16px] xl:text-[13px] text-white mt-2">{text} <br /> completed</div>
+        <div className='xl:text-[11px] md:text-[12px] lg:text-[13px] text-[11px] lg:ml-[20px] md:ml-[18px] ml-[-10px] mt-1 md:mt-5 lg:mt-3 xl:ml-[6px] xl:mt-2'>*The values here has been rounded off</div>
       </div>
     </div>
   );
