@@ -39,8 +39,8 @@ const NetProfitCard = () => {
             strokeWidth: 12,  // Adjust this value to make the progress bar thicker
           })}
         />
-        <div className="absolute top-[20%] left-[16%] md:top-[36%] md:left-[30%] lg:top-[36%] lg:left-[26%] xl:top-[21%] xl:left-[21%] text-center text-[12px] lg:text-[16px] xl:text-[13px] text-white mt-2">{text} <br /> completed</div>
-        <div className='xl:text-[10px] md:text-[12px] lg:text-[13px] text-[9.5px] lg:ml-[20px] md:ml-[18px] ml-[-8px] mt-3 md:mt-5 lg:mt-3 xl:ml-[6px] xl:mt-2'>*The values here has been rounded off</div>
+        <div className="absolute top-[18%] left-[18%] md:top-[36%] md:left-[30%] lg:top-[36%] lg:left-[26%] xl:top-[21%] xl:left-[21%] text-center text-[11px] lg:text-[16px] xl:text-[13px] text-white mt-2">{text} <br /> completed</div>
+        <div className='xl:text-[10px] md:text-[12px] lg:text-[13px] text-[9.5px] lg:ml-[20px] md:ml-[18px] ml-[-12px] mt-3 md:mt-5 lg:mt-3 xl:ml-[6px] xl:mt-2'>*The values here has been rounded off</div>
       </div>
     </div>
   );

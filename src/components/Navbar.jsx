@@ -9,17 +9,17 @@ const Navbar = () => {
       <div className="relative flex items-center mr-6 md:mr-0">
         <FaSearch className="absolute left-3 text-[#ffffff] cursor-pointer" />
         <input 
-          className="bg-[#2A2B30] pl-10 pr-4 py-2 rounded focus:outline-none text-[#ffffff] placeholder-[#ffffff] " 
+          className="bg-[#2A2B30] pl-10 pr-4 py-2 rounded focus:outline-none text-[#ffffff] placeholder-[#ffffff] w-40 md:w-100" 
           type="text" 
           placeholder="Search" 
         />
       </div>
       <div className='flex items-center justify-center'>
         <div className='flex gap-2 md:gap-4'>
-        <div className='bg-[#46474C] rounded-full w-10 h-10 flex items-center justify-center cursor-pointer'>
+        <div className='bg-[#46474C] rounded-full w-10 h-10 hidden md:flex items-center justify-center cursor-pointer'>
             <FaEnvelope />
         </div>
-        <div className='bg-[#46474C] rounded-full w-10 h-10 flex items-center justify-center cursor-pointer'>
+        <div className='bg-[#46474C] rounded-full w-10 h-10 hidden md:flex items-center justify-center cursor-pointer'>
             <FaGear />
         </div>
         <div className='relative bg-[#46474C] rounded-full w-10 h-10 flex items-center justify-center cursor-pointer'>

@@ -12,9 +12,9 @@ import Goals from '../components/Goals';
 
 const Home = () => {
   return (
-    <div className="flex">
+    <div className="flex overflow-hidden">
       <Sidebar />
-      <div className="flex-grow bg-[#141416]">
+      <div className="flex-grow bg-[#141416] ">
         <Navbar />
         <div className="px-6 pt-6 pb-2">
           <h1 className="text-3xl font-bold text-[#ffffff]">Dashboard</h1>

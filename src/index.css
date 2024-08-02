@@ -27,6 +27,29 @@
   border-radius: 10px;
 }
 
+.recent-orders {
+  overflow-x: auto;
+}
+
+.recent-orders::-webkit-scrollbar {
+  height: 6px; /* Adjust this value to control the height of the scrollbar */
+  background: #2d2d2d; /* Dark gray background */
+}
+
+.recent-orders::-webkit-scrollbar-thumb {
+  background: #9ca3af; /* Light blue thumb */
+  border-radius: 10px;
+}
+
+.recent-orders::-webkit-scrollbar-thumb:hover {
+  background: #6b7280; /* Slightly darker color for hover effect */
+}
+
+.recent-orders::-webkit-scrollbar-track {
+  background: #1f1f1f; /* Darker background for the track */
+}
+
+
 @layer utilities {
   @variants 700-800 {
     .ml-700-800 {

@@ -5,7 +5,7 @@ import { FaArrowRightFromBracket, FaHouse, FaSquarePollVertical, FaWallet } from
 
 const Sidebar = () => {
   return (
-    <div className="bg-[#202028] text-white p-4 relative">
+    <div className="bg-[#202028] text-white p-2 md:p-4 relative">
       <div className="flex items-center justify-center mb-8">
         <div className="h-10 w-10 mt-2">
           <img src={img} alt="" />

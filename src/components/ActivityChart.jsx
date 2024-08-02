@@ -92,14 +92,14 @@ const ActivityChart = () => {
   };
 
   return (
-    <div className="p-4 bg-[#202028] rounded-lg">
+    <div className="p-1 md:p-4 bg-[#202028] rounded-lg">
       <div className='flex items-center justify-between'>
         <h4 className="text-white text-lg mb-4">Activity</h4>
         <div className='relative'>
           <select 
             value={selectedOption} 
             onChange={handleSelectChange} 
-            className='appearance-none px-8 py-2 rounded-3xl text-[#ffffff] bg-[#4B4C51] border-[1px] border-[#777676] focus:outline-none cursor-pointer'
+            className='appearance-none px-7 py-1 md:px-8 md:py-2 rounded-3xl text-[#ffffff] bg-[#4B4C51] border-[1px] border-[#777676] focus:outline-none cursor-pointer text-base md:text-lg'
           >
             <option value="Weekly">Weekly</option>
             <option value="Monthly">Monthly</option>
@@ -111,7 +111,7 @@ const ActivityChart = () => {
         </div>
       </div>
       <ResponsiveContainer width="100%" height={200}>
-        <BarChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+        <BarChart data={data} margin={{ top: 20, right: 15, left: 10, bottom: 5 }}>
           <XAxis dataKey="name" tick={<CustomizedAxisTick />} />
           <YAxis tick={<CustomizedYAxisTick />} domain={[0, 'auto']} />
           <Tooltip />
