@@ -2,7 +2,7 @@ import React from 'react';
 
 const DashboardCard = ({ title, value, icon: Icon, color, rate, rateArrow: Arrow, rateArrowColor, iconColor, subColor, subColorIcon }) => {
   return (
-    <div className='bg-gray-800 text-white p-4 rounded-lg shadow-md flex'>
+    <div className='bg-[#202028] text-white p-4 rounded-lg shadow-md flex'>
       <div className='w-full'>
         <div className='p-2 flex items-center justify-center rounded-lg w-12 h-12 relative' style={{backgroundColor: color}}>
           <Icon size={24} style={{ color: iconColor }}/>

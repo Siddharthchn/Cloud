@@ -1,3 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Slab", "Playfair Display", serif;
+}
+
+/* Add this to your global stylesheet or component-specific CSS file */
+.feedback-container {
+  overflow-y: auto;
+  max-height: 430px; /* Ensure the container height is controlled */
+}
+
+.feedback-container::-webkit-scrollbar {
+  width: 10px;
+  background: #2d2d2d; /* Dark gray background */
+}
+
+.feedback-container::-webkit-scrollbar-thumb {
+  background: #9ca3af; /* Light blue thumb */
+  border-radius: 10px;
+}
+
+@layer utilities {
+  @variants 700-800 {
+    .ml-700-800 {
+      margin-left: 13px;
+    }
+  }
+  @variants 800-900 {
+    .ml-800-900 {
+      margin-left: 18px;
+    }
+  }
+  @variants 900-1024 {
+    .ml-900-1024 {
+      margin-left: 36px;
+    }
+  }
+}

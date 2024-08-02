@@ -27,7 +27,7 @@ const NetProfitCard = () => {
           </div>
         </div>
       </div>
-      <div className='relative w-[120px] h-[100px] md:w-[140px] md:h-[120px] lg:w-[160px] lg:h-[140px] md:mt-10 md:ml-3 lg:mt-8 lg:ml-[46px] xl:mt-0 xl:ml-0'>
+      <div className='relative w-[120px] h-[100px] md:w-[140px] md:h-[120px] lg:w-[160px] lg:h-[140px] md:mt-10 700-800:ml-[13px] 800-900:ml-[18px] 900-1024:ml-[36px] lg:mt-8 lg:ml-[46px] xl:mt-0 xl:ml-0'>
         <CircularProgressbar
         value={progress}
           styles={buildStyles({
@@ -39,8 +39,8 @@ const NetProfitCard = () => {
             strokeWidth: 12,  // Adjust this value to make the progress bar thicker
           })}
         />
-        <div className="absolute top-[20%] left-[16%] md:top-[35%] md:left-[25%] lg:top-[36%] lg:left-[26%] xl:top-[21%] xl:left-[21%] text-center text-[13px] lg:text-[16px] xl:text-[13px] text-white mt-2">{text} <br /> completed</div>
-        <div className='xl:text-[11px] md:text-[12px] lg:text-[13px] text-[11px] lg:ml-[20px] md:ml-[18px] ml-[-10px] mt-1 md:mt-5 lg:mt-3 xl:ml-[6px] xl:mt-2'>*The values here has been rounded off</div>
+        <div className="absolute top-[20%] left-[16%] md:top-[36%] md:left-[30%] lg:top-[36%] lg:left-[26%] xl:top-[21%] xl:left-[21%] text-center text-[12px] lg:text-[16px] xl:text-[13px] text-white mt-2">{text} <br /> completed</div>
+        <div className='xl:text-[10px] md:text-[12px] lg:text-[13px] text-[9.5px] lg:ml-[20px] md:ml-[18px] ml-[-8px] mt-3 md:mt-5 lg:mt-3 xl:ml-[6px] xl:mt-2'>*The values here has been rounded off</div>
       </div>
     </div>
   );
