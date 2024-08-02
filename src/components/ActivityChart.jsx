@@ -99,7 +99,7 @@ const ActivityChart = () => {
           <select 
             value={selectedOption} 
             onChange={handleSelectChange} 
-            className='appearance-none px-8 py-2 rounded-3xl text-[#ffffff] bg-[#4B4C51] border-[1px] border-[#777676] focus:outline-none'
+            className='appearance-none px-8 py-2 rounded-3xl text-[#ffffff] bg-[#4B4C51] border-[1px] border-[#777676] focus:outline-none cursor-pointer'
           >
             <option value="Weekly">Weekly</option>
             <option value="Monthly">Monthly</option>
